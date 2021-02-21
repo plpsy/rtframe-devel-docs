@@ -261,35 +261,43 @@ step列表中，如果是第一个step,则固定设置
 ```
 
 op增加一个资源需求指数的字段,默认值是1
+```
 {
     "args": ["uv", "org:1.4", "null"],
     "op": "Map",
     "processor_type": "dsp",
 	"res_level" : 1
 }
-
+```
 
 ## 新增rest api
 
 * 获取机箱列表概要信息
+
 GET /api/res
 
 * 获取指定机箱下的板卡列表概要信息
+
 GET /api/res/板卡名称
 
 * 获取指定板卡下的芯片列表信息
+
 GET /api/res/机箱名称/板卡名称
 
 * 获取机箱列表详细信息,详细信息至芯片
+
 GET /api/resources
 
 * 日志获取接口
+
 GET /api/logs/芯片id/计算核id
 
 * 参数注入接口
+
 POST /api/params/芯片id/计算核id
 
 * 算法注入接口
+
 POST /api/alg/芯片id/计算核id
 
 
