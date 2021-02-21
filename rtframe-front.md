@@ -258,13 +258,13 @@ step增加一个资源需求指数的字段,默认值是1
 ## 新增rest api
 
 * 获取机箱列表概要信息
-/api/boxes
+/api/res
 
 * 获取指定机箱下的板卡列表概要信息
-/api/boards/板卡名称
+/api/res/板卡名称
 
 * 获取指定板卡下的芯片列表信息
-/api/chips/机箱名称/板卡名称
+/api/res/机箱名称/板卡名称
 
 * 获取机箱列表详细信息,详细信息至芯片
-/api/boxes/details
+/api/resources
