@@ -288,6 +288,10 @@ GET /api/res/机箱名称/板卡名称
 
 GET /api/resources
 
+* 获取任务的综合化应用视图信息
+
+GET /api/comjobs/任务ID
+
 * 日志获取接口
 
 GET /api/logs/芯片id/计算核id
@@ -299,5 +303,4 @@ POST /api/params/芯片id/计算核id
 * 算法注入接口
 
 POST /api/alg/芯片id/计算核id
-
 
