@@ -296,11 +296,22 @@ GET /api/comjobs/任务ID
 
 GET /api/logs/芯片id/计算核id
 
-* 参数注入接口
+* 算法参数注入接口
 
-POST /api/params/芯片id/计算核id
+POST /api/algparam/芯片id/计算核id
 
-* 算法注入接口
+通过Multipart/form-data POST的方式注入算法参数,上传的文件标识是paramfile
 
-POST /api/alg/芯片id/计算核id
+通过curl指令操作的例子如下:
 
+curl -i -X POST -F "paramfile=@./param" http://www.rtframe.cn/api/algparam/50/1
+
+* 算法重构接口
+
+PUT /api/runningalg/芯片id/计算核id/算法名称/算法版本
+
+算法名称与算法版本,是指软件算法仓库中的算法与版本,用户通过搜索选择下发要重构的算法。
+
+通过curl指令操作的例子如下:
+
+curl -i -X PUT http://www.rtframe.cn/api/runningalg/50/1/number/1.0
